@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Regra de 3</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container" style="width: 500px; max-width: 500px;">
+		<div class="card">
+			<div class="card-header" style="text-align: center; font-weight: bold;">
+				Regra de 3 simples
+			</div>
+			<div class="card-body">
+				<p class="card-text">Informe os valores para realizar o cálculo.</p>
+				<div style="display: flex;justify-content: space-between;align-items: center;">
+					<div class="form-group">
+						<input type="number" class="form-control" id="valor1" aria-describedby="helpId" placeholder="Valor 1" style="width: 200px; text-align: center">
+					</div>
+					<div class="form-group">
+						<input type="number" class="form-control" id="valor2" aria-describedby="helpId" placeholder="Valor 2" style="width: 200px; text-align: center">
+					</div>
+				</div>
+				<br>
+				<div style="display: flex;justify-content: space-between;align-items: center;">
+					<div class="form-group">
+						<input type="number" class="form-control" id="valor3" aria-describedby="helpId" placeholder="Valor 3" style="width: 200px; text-align: center">
+					</div>
+					<div class="form-group">
+						<input type="number" class="form-control" id="valorX" aria-describedby="helpId" placeholder="X" disabled style="width: 200px; text-align: center">
+					</div>
+				</div>
+				<div class="form-check">
+				  <label class="form-check-label" style="padding-top: 10px;">
+					<input type="checkbox" class="form-check-input" id="inverter" value="checkedValue">
+					Grandeza inversa
+				  </label>
+				</div>
+				<br>
+				<button id="calcular" class="btn btn-primary" onclick="CalcularSimples()">Calcular</button>
+				<div style="font-size:20px; text-align:center">
+					O valor de X é: 
+					<span id="resultado"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container" style="width: 700px; max-width: 700px;">
+		<div class="card">
+			<div class="card-header" style="text-align: center; font-weight: bold;">
+				Regra de 3 composta
+			</div>
+			<div class="card-body">
+				<p class="card-text">Informe os valores para realizar o cálculo.</p>
+				<div style="display: flex;justify-content: space-between;align-items: center;">
+					<div class="form-group">
+						<input type="number" class="form-control" id="cvalor1" aria-describedby="helpId" placeholder="Valor 1" style="width: 200px; text-align: center">
+					</div>
+					<div class="form-group">
+						<input type="number" class="form-control" id="cvalor2" aria-describedby="helpId" placeholder="Valor 2" style="width: 200px; text-align: center">
+					</div>
+					<div class="form-group">
+						<input type="number" class="form-control" id="cvalor3" aria-describedby="helpId" placeholder="Valor 3" style="width: 200px; text-align: center">
+					</div>
+				</div>
+				<br>
+				<div style="display: flex;justify-content: space-between; align-items: center;">
+					<div class="form-group">
+						<input type="number" class="form-control" id="cvalor4" aria-describedby="helpId" placeholder="Valor 4" style="width: 200px; text-align: center">
+					</div>
+					<div class="form-group">
+						<input type="number" class="form-control" id="cvalor5" aria-describedby="helpId" placeholder="Valor 5" style="width: 200px; text-align: center">
+					</div>
+					<div class="form-group">
+						<input type="number" class="form-control" id="cvalorX" aria-describedby="helpId" placeholder="X" disabled style="width: 200px; text-align: center">
+					</div>
+				</div>
+				<div style="display:flex">
+					<div class="form-check">
+						<label class="form-check-label" style="padding-top: 10px;">
+							<input type="checkbox" class="form-check-input" id="cinverter1" value="checkedValue">
+							Grandeza inversa
+						</label>
+					</div>
+					<div class="form-check" style="margin-left: 77px;">
+						<label class="form-check-label" style="padding-top: 10px;">
+							<input type="checkbox" class="form-check-input" id="cinverter2" value="checkedValue">
+							Grandeza inversa
+						</label>
+					</div>
+				</div>
+				<br>
+				<button id="calcular" class="btn btn-primary" onclick="CalcularComposta()">Calcular</button>
+				<div style="font-size:20px; text-align:center">
+					O valor de X é: 
+					<span id="cresultado"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+</body>
+</html>
